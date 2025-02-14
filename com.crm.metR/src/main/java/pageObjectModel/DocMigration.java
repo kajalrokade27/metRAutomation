@@ -26,5 +26,30 @@ public class DocMigration extends BaseClass
    public @FindBy(xpath="//img[@class='img-fluid']")
    WebElement uploadFile;
    
+   public @FindBy(xpath="//input[@name=\"checkbox-1\"]")
+   WebElement checkbox;
+   
+   public @FindBy(xpath="//button[normalize-space()='Upload']")
+   WebElement upload_button;
+   
+   public @FindBy(xpath="//div[@class=\"toast-body\"]")
+   WebElement UpSuccessMessage;
+   
+   public @FindBy(xpath="//button[@class=\"btn btn-primary btn-sm\"]")
+   WebElement preFlightCheck;
+   
+   public @FindBy(xpath="//div[@class=\"toast-body\"]")
+   WebElement preFlightCheck_Msg;
+   
+   public @FindBy(xpath="//button[@class=\"btn btn-primary btn-sm\"]")
+   WebElement convert_now;
+   
+   public @FindBy(xpath="//div[@class=\"toast-body\"]")
+   WebElement converted_msg;
+   
+   public @FindBy(xpath="//button[@class=\"swal2-confirm swal2-styled\"]")
+   WebElement verify_now;
+   
+   
    
 }
