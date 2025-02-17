@@ -6,6 +6,7 @@
       <class name="docMigrationValidation.VerifyIPSourceDropdown">
         <methods>
           <include name="preCondition"/>
+          <include name="signOut"/>
           <include name="verifyDropdown"/>
         </methods>
       </class> <!-- docMigrationValidation.VerifyIPSourceDropdown -->

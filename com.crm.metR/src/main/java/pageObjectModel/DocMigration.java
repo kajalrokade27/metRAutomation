@@ -50,6 +50,11 @@ public class DocMigration extends BaseClass
    public @FindBy(xpath="//button[@class=\"swal2-confirm swal2-styled\"]")
    WebElement verify_now;
    
+   public @FindBy(xpath="//span[@class=\"custom-text ml-2\"]")
+   WebElement view_output;
+   
+   public @FindBy(xpath="//div[@class='toast-body']")
+   WebElement post_fc_success_msg;
    
    
 }

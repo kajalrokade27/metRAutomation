@@ -74,5 +74,11 @@ public class VerifyIPSourceDropdown  extends BaseClass
      assertTrue(dm.converted_msg.isDisplayed());
      Reporter.log("Files converted successfully.", true);
      
+     dm.verify_now.click();
+     assertTrue(dm.post_fc_success_msg.isDisplayed());
+     Reporter.log("Post-flight check successful", true);
+     
+     dm.view_output.click();
+     
   }
 }

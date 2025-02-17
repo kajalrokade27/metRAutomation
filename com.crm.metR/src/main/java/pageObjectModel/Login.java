@@ -41,4 +41,13 @@ public class Login  extends BaseClass
   
   public @FindBy(xpath="//button[@class=\"swal2-confirm swal2-styled\"]")
   WebElement ok;
+  
+  
+  public @FindBy(xpath="//span[@class=\"d-none d-xl-inline-block ml-1\"]")
+  WebElement signOut_dropdown;
+  
+  public @FindBy(xpath="//a[@class=\"dropdown-item text-danger\"]")
+  WebElement sign_out;
+  
+  
 }

@@ -9,7 +9,10 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
+import org.testng.asserts.SoftAssert;
 
 import fileUtility.GetPropertyData;
 import pageObjectModel.Login;
@@ -50,25 +53,32 @@ public static WebDriver driver;
 	
        
        Login lg = new Login(driver);	
+       SoftAssert sa = new SoftAssert();
 	    lg.enterEmail("user2@met-r.io");
 	    lg.enterPassword("Meta@123");
 	    lg.clickSignIn();
        
 	    Thread.sleep(3000);
-	    assertTrue(lg.logout.isDisplayed());
-	    lg.logout.click();
-	    Thread.sleep(2000);
-	    lg.ok.click();
-	    lg.email.clear();
-	    lg.enterEmail("user2@met-r.io");
-	    lg.password.clear();
-	    lg.enterPassword("Meta@123");
-	    lg.clickSignIn();
-	    Thread.sleep(4000);
+//	   sa.assertTrue(lg.logout.isDisplayed());
+//	    lg.logout.click();
+//	    Thread.sleep(2000);
+//	    lg.ok.click();
+//	    lg.email.clear();
+//	    lg.enterEmail("user2@met-r.io");
+//	    lg.password.clear();
+//	    lg.enterPassword("Meta@123");
+//	    lg.clickSignIn();
+//	    Thread.sleep(4000);
 	}
-//	@AfterClass
-//	public void postCondition()
-//	{
-//		driver.close();
-//	}
+	@AfterClass
+	public void signOut()
+	{
+		
+		Login lg = new Login(driver);	
+		lg.signOut_dropdown.click();
+		lg.sign_out.click();
+		lg.logout.click();
+		driver.close();
+	}
+
 }
